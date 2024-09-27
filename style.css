@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;    
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;    
+}
+
+.main{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: #dadada60;
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1vw 4vw;
+    border-bottom: 0.7px solid rgba(128, 128, 128, 0.603);
+    z-index: 99;
+}
+.main .navbar .menu{
+    display: none;
+}
+.input-container{
+    width: 58%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.input-container input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.input-container .icon i{
+    font-size: 1rem;
+    color: grey;
+}
+
+
+.profile-container .profile-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;    
+}
+.profile-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: top;
+}
+.profile-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-container #upload{
+    padding: 10px;
+    background-color: #EA4395;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.profile-container .icon{
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.left-sidebar{
+    width: 300px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    left: 0;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.left-sidebar .top-section{
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.7px solid rgba(128, 128, 128, 0.603);
+}
+
+.left-sidebar .top-section .logo img{
+    width: 50px;
+}
+.left-sidebar .top-section .icon{
+    font-size: 18.5px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.662);
+    border-radius: 50%;
+}
+.left-sidebar .body-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 0px;
+    gap: 10px;
+}
+.left-sidebar .body-section .profile-image{
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid purple;
+}
+.left-sidebar .body-section .profile-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.left-sidebar .body-section .name{
+    font-size: 1.2rem;
+    color: rgb(61, 60, 60);
+    margin-top: 10px;
+}
+
+.left-sidebar .body-section .followers-row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 0.7px solid rgba(128, 128, 128, 0.372);
+}
+.left-sidebar .body-section .followers-row .follower-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.left-sidebar .body-section .followers-row .follower-item .text{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.left-sidebar .body-section .followers-row .follower-item .number{
+    font-size: 0.9rem;
+}
+
+.left-sidebar .body-section .options-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    padding: 0px 2vw;
+    padding-top: 2vw;
+
+}
+.left-sidebar .body-section .options-section .option-row{
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+.left-sidebar .body-section .option-row .badge{
+    font-size: 0.9rem;
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #EA4395;
+    left: 100%;
+    top: -10px;
+}
+.left-sidebar .body-section .option-row .icon{
+font-size: 1.2rem;
+}
+.left-sidebar .body-section .option-row:first-child{
+    color: #EA4395;
+}
+.left-sidebar .body-section .option-row:nth-child(6){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-sidebar .body-section .option-row:last-child .left{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.right-section{
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    right: 3rem;
+    top: 30%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+}
+.right-section .top-section{
+    width: 100%;
+    background-color: #dadada30;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-section .top-section h2{
+    font-size: 1.3rem;
+}
+.right-section .top-section p{
+    font-size: 0.9rem;
+    color: grey;
+}
+.right-section .option-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+    border-bottom: 0.7px solid rgba(128, 128, 128, 0.379);
+}
+.right-section .option-row .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.right-section .option-row .left .profile-image{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.right-section .option-row .left .info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+
+.right-section .option-row .left .info .name{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.right-section .option-row .left .info .address{
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.right-section .option-row .follow{
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.356);
+}
+
+.main .feed-section{
+    width: calc(100% - 800px) ;
+    margin-top: 130px;
+    position: relative;
+}
+
+.card-section{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card-section .card{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.card-section .card .top-section{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+}
+.card-section .card .top-section .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-section .card .top-section .left h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-section .card .top-section .left .profile-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card-section .card .top-section .left .profile-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-section .card .post-image{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.card-section .card .post-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-section .card .icons-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    background-color: white;
+    padding: 10px 1vw;
+}
+.card-section .card .icon i{
+    font-size: 1.2rem;
+}
+
+.card-section .card .icons-row .left, .card-section .card .icons-row .right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-stack-section{
+    width: 100%;
+    padding: 10px 1vw;
+    background-color: white;
+    display: flex;
+    /* align-items: center; */
+    gap: 40px;
+    border-bottom: 0.7px solid rgba(128, 128, 128, 0.326);
+}
+.profile-stack-section .image-container{
+    position: relative;
+}
+.profile-stack-section .image-container img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid white;
+}
+
+.profile-stack-section .image-container .img1{
+z-index: 2;
+}
+
+.profile-stack-section .image-container .img2{
+    left: 7px;
+    z-index: 3;
+    
+}
+
+.profile-stack-section .image-container .img3{
+    z-index: 4;
+    left: 13px;
+}
+
+.profile-stack-section p span{
+    font-weight: 600    ;
+}
+
+.card-section .card .comment-section{
+    width: 100%;
+    background-color: white;
+    padding: 0 1.5vw;
+    padding-top:  1.5vw;
+}
+
+.card-section .card .comment-section .comment-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 1vw;
+}
+.card-section .card .comment-section .comment-row .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.card-section .card .comment-section .comment-row .profile-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-section .card .comment-section .comment-row .comment-box{
+    border-radius: 12px;
+    padding: 1vw;
+    background-color: lightgray;
+    color: black;
+    font-size: 0.8rem;
+    width: 300px;
+}
+
+.write-comment-section{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+.write-comment-section .write-comment{
+    width: 90%;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+.write-comment-section .write-comment input{
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .left-sidebar, .right-section{
+        display: none;
+    }
+    .main{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    .main .feed-section{
+        width: 90%;
+    }
+    .main .navbar{
+        justify-content: space-between;
+        padding: 15px;
+        
+    }
+    .main .navbar .profile-container{
+        display: none;
+    }
+    .main .navbar .menu{
+        display: block;
+    }
+}
